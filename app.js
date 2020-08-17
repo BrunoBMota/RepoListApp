@@ -1,6 +1,4 @@
 const getUserObject = function(username){
-  // objects[i].owner.html_url
-  // objects[i].owner.name
   const URL = `https://api.github.com/users/${username}/repos`;
   fetch(URL).then(response => response.json()).then(responseJson => displayResults(responseJson));
 };
@@ -19,9 +17,4 @@ const watchForm = function() {
     getUserObject($('#query').val());
   });
 }; 
-
-//array->object(id,node_id,name,full_name,private,oswer_obc)
-// const displayUser = function(responseJson){
-// };
-
 watchForm();
